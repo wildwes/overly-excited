@@ -7,7 +7,7 @@ let sentence1 = ["The","walrus","danced","through","the","trees","in","the","lig
 //     and output the words to the browser console.
 let wordCount1 = 1;
 
-function addExcitement1 (theWordArray) {
+function addExcitement1 (theWordArray, punctuation) {
 
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = ""
@@ -17,8 +17,9 @@ function addExcitement1 (theWordArray) {
         if(
             wordCount1 % 3 === 0
             ){
-                buildMeUp += `${theWordArray[i]}! `;
+                buildMeUp += `${theWordArray[i]}${punctuation} `;
                 wordCount1++;
+                
             }
             else{
                 buildMeUp += `${theWordArray[i]} `;
@@ -33,5 +34,5 @@ function addExcitement1 (theWordArray) {
 }
 
 // Invoke the function and pass in the array
-addExcitement1(sentence1)
+addExcitement1(sentence1, "$")
 
